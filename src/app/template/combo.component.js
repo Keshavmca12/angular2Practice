@@ -11,13 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var ComboComponent = (function () {
     function ComboComponent() {
-        this.dataObject = new core_1.EventEmitter();
-        console.log("counter");
+        /*@Input()
+       dataObject: string="hello";*/
+        this.dataObjectChange = new core_1.EventEmitter();
+        /*setStatus(status:boolean){
+          this.dataObjectChange=status;
+          this.dataObjectChange.emit(status);
+        }*/
+        /*constructor(){
+            console.log("counter");
+        }*/
     }
-    ComboComponent.prototype.setStatus = function (status) {
-        this.dataObject = status;
-        this.dataObject.emit(status);
-    };
     return ComboComponent;
 }());
 __decorate([
@@ -27,14 +31,13 @@ __decorate([
 __decorate([
     core_1.Output(),
     __metadata("design:type", Object)
-], ComboComponent.prototype, "dataObject", void 0);
+], ComboComponent.prototype, "dataObjectChange", void 0);
 ComboComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'combo-compo',
-        template: "\n  Name Combo :: \n <div class=\"form-group\">\n      <label>Theme</label>\n      <select name=\"theme\" class=\"form-control\" >\n        <option *ngFor=\"let theme of dataObject\" >{{theme.name}}</option>\n      </select>\n    </div>\n\n\t\t\t"
-    }),
-    __metadata("design:paramtypes", [])
+        template: "\n  <div> combo component </div>\n <div class=\"form-group\">\n      <label>Theme</label>\n      <select name=\"theme\" class=\"form-control\" >\n        <option *ngFor=\"let theme of dataObject\" >{{theme.name}}</option>\n      </select>\n    </div>\n\n\t\t\t"
+    })
 ], ComboComponent);
 exports.ComboComponent = ComboComponent;
 //# sourceMappingURL=combo.component.js.map

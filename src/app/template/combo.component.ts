@@ -7,7 +7,7 @@ import {Component,Input, Output, EventEmitter} from "@angular/core";
   moduleId:  module.id,
   selector: 'combo-compo',
   template: `
-  Name Combo :: 
+  <div> combo component </div>
  <div class="form-group">
       <label>Theme</label>
       <select name="theme" class="form-control" >
@@ -20,23 +20,22 @@ import {Component,Input, Output, EventEmitter} from "@angular/core";
 
 export class ComboComponent{
 
-
+	
    /*@Input()
   dataObject: string="hello";*/
-	/*@Output()
-    dataProvider = new EventEmitter();*/
+	
 
    @Input() dataObject: Array<any>;
-  @Output() dataObject= new EventEmitter<boolean>();
+  @Output() dataObjectChange= new EventEmitter<boolean>();
 
   
-  setStatus(status:boolean){
-    this.dataObject=status;
-    this.dataObject.emit(status);
-  }
+  /*setStatus(status:boolean){
+    this.dataObjectChange=status;
+    this.dataObjectChange.emit(status);
+  }*/
    
-    constructor(){
+    /*constructor(){
     	console.log("counter");
-    }
+    }*/
 
 }
