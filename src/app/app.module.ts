@@ -17,6 +17,9 @@ import {Angular2DatatableModule} from "./datatable-angular2/angular2-tatablemodu
 import {TestTableComponent} from "./datatable-angular2/angular2-datatable";
 import {NG2DataTableModule} from "./ng2dataTable/datatable.module";
 import {TableDemoComponent} from "./ng2dataTable/datatable.component";
+import {MyPDFViewerModule} from "./pdfviewerComponent/pdfviewerModule";
+import {MyPDFViewerComponent} from "./pdfviewerComponent/pdfCiewerComponent";
+
 
 const appRoutes: Routes = [
   {
@@ -48,6 +51,10 @@ const appRoutes: Routes = [
     path: 'ng2Dtable',
     component: TableDemoComponent
   },
+  {
+    path: 'pdfViewer',
+    component: MyPDFViewerComponent
+  },
   { path: '**', component: HeroFormTemplate2Component }
 ];
 
@@ -62,7 +69,8 @@ const appRoutes: Routes = [
     RouterModule,
     RouterModule.forRoot(appRoutes),
     Angular2DatatableModule,
-    NG2DataTableModule
+    NG2DataTableModule,
+    MyPDFViewerModule
   ],
 
   declarations: [ AppComponent ],

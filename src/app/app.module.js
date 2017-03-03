@@ -24,6 +24,8 @@ var angular2_tatablemodule_1 = require("./datatable-angular2/angular2-tatablemod
 var angular2_datatable_1 = require("./datatable-angular2/angular2-datatable");
 var datatable_module_1 = require("./ng2dataTable/datatable.module");
 var datatable_component_1 = require("./ng2dataTable/datatable.component");
+var pdfviewerModule_1 = require("./pdfviewerComponent/pdfviewerModule");
+var pdfCiewerComponent_1 = require("./pdfviewerComponent/pdfCiewerComponent");
 var appRoutes = [
     {
         path: 'reactive',
@@ -53,6 +55,10 @@ var appRoutes = [
         path: 'ng2Dtable',
         component: datatable_component_1.TableDemoComponent
     },
+    {
+        path: 'pdfViewer',
+        component: pdfCiewerComponent_1.MyPDFViewerComponent
+    },
     { path: '**', component: hero_form_template2_component_1.HeroFormTemplate2Component }
 ];
 var AppModule = (function () {
@@ -72,7 +78,8 @@ AppModule = __decorate([
             router_1.RouterModule,
             router_1.RouterModule.forRoot(appRoutes),
             angular2_tatablemodule_1.Angular2DatatableModule,
-            datatable_module_1.NG2DataTableModule
+            datatable_module_1.NG2DataTableModule,
+            pdfviewerModule_1.MyPDFViewerModule
         ],
         declarations: [app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent]
