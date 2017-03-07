@@ -10,7 +10,6 @@ import { Component } from '@angular/core';
       <a routerLink="/template1" routerLinkActive="active">template1</a>
       <a routerLink="/naviagtion"  routerLinkActive="inactive" >Navigation</a>
       <a routerLink="/angular2Dtable"  routerLinkActive="inactive" >angular2Dtable</a>
-       <a routerLink="/ng2Dtable"  routerLinkActive="inactive" >ng2Dtable</a>
          <a routerLink="/ng2Dtable"  routerLinkActive="inactive" >ng2Dtable</a>
          <a routerLink="/pdfViewer"  routerLinkActive="inactive" >pdfViewer</a>
     </nav>
