@@ -5,7 +5,7 @@ import { AbstractControl, NG_VALIDATORS, Validator, ValidatorFn, Validators } fr
 export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
   return (control: AbstractControl): {[key: string]: any} => {
     const name = control.value;
-    console.log("control",control);
+   // console.log("control",control);
     const no = nameRe.test(name);
     return no ? {'forbiddenName': {name}} : null;
   };
@@ -20,7 +20,7 @@ export class ForbiddenValidatorDirective implements Validator, OnChanges {
   private valFn = Validators.nullValidator;
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("changes",changes);
+  //  console.log("changes",changes);
     const change = changes['forbiddenName'];
     if (change) {
       const val: string | RegExp = change.currentValue;

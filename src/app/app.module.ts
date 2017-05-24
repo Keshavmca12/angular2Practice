@@ -15,8 +15,8 @@ import {HeroFormReactiveComponent} from "./reactive/hero-form-reactive.component
 import {BreadcrumbModule} from "./breadcrumbnew/breadcrumb.module";
 import {Angular2DatatableModule} from "./datatable-angular2/angular2-tatablemodule";
 import {TestTableComponent} from "./datatable-angular2/angular2-datatable";
-import {NG2DataTableModule} from "./ng2dataTable/datatable.module";
-import {TableDemoComponent} from "./ng2dataTable/datatable.component";
+/*import {NG2DataTableModule} from "./ng2dataTable/datatable.module";
+import {TableDemoComponent} from "./ng2dataTable/datatable.component";*/
 import {MyPDFViewerModule} from "./pdfviewerComponent/pdfviewerModule";
 import {MyPDFViewerComponent} from "./pdfviewerComponent/pdfCiewerComponent";
 
@@ -47,10 +47,10 @@ const appRoutes: Routes = [
     path: 'angular2Dtable',
     component: TestTableComponent
   },
-  {
+  /*{
     path: 'ng2Dtable',
     component: TableDemoComponent
-  },
+  },*/
   {
     path: 'pdfViewer',
     component: MyPDFViewerComponent
@@ -69,7 +69,7 @@ const appRoutes: Routes = [
     RouterModule,
     RouterModule.forRoot(appRoutes),
     Angular2DatatableModule,
-    NG2DataTableModule,
+   // NG2DataTableModule,
     MyPDFViewerModule
   ],
 

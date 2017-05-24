@@ -10,6 +10,11 @@ import {Hero} from "../shared/hero";
   <combo-compo  [(dataObject)]="myData" (onComboChange)="handleUserUpdated($event)"></combo-compo>
 
 <combo-compo  [(dataObject)]="auxData" (onComboChange)="handleauxUpdated($event)"></combo-compo>
+
+ <h1>Home Component</h1>
+        <button (click)="toggleLoading()">Toggle Ladda in button below</button>
+        <hr>
+        <button [ladda]="isLoading">Save</button>
   
 <h1>Test form</h1><form>
       <div class="form-group">
@@ -40,6 +45,13 @@ myData :Array<any>=[];
 
 auxDataSet:any ={};
 auxData :Array<any>=[];
+
+ // trigger-variable for Ladda
+    isLoading: boolean = false;
+    
+    toggleLoading() {
+        this.isLoading = !this.isLoading;
+    }
 
   loadData() {
     this.myData = [

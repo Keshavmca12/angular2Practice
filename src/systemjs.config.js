@@ -50,9 +50,12 @@
       'lodash' : 'npm:lodash/lodash.js',
       'ng2-table' : 'npm:ng2-table/ng2-table.js',
       'moment': 'npm:moment/moment.js',
-      'ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
+      /*'ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ng2-bootstrap.umd.js',*/
       'ng2-pdf-viewer': 'node_modules/ng2-pdf-viewer',
-    'pdfjs-dist': 'node_modules/pdfjs-dist'
+    'pdfjs-dist': 'node_modules/pdfjs-dist',
+      'angular2-ladda': 'node_modules/angular2-ladda/module',
+    'ladda':          'node_modules/ladda/js',
+    'spin':           'node_modules/ladda/js/spin.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -64,6 +67,8 @@
         defaultExtension: 'js'
       },
      'ng2-pdf-viewer': { main: 'dist/index.js', defaultExtension: 'js' },
+      'angular2-ladda': { main: 'module.js', defaultExtension: 'js' },
+    'ladda':          { main: 'ladda.js', defaultExtension: 'js' },
     'pdfjs-dist': { defaultExtension: 'js' }
     }
   });

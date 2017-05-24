@@ -13,6 +13,7 @@ var http_1 = require("@angular/http");
 var angular2_datatable_2 = require("./angular2-datatable");
 var data_filterpipe_1 = require("./data-filterpipe");
 var shared_module_1 = require("../shared/shared.module");
+var angular2_ladda_1 = require("angular2-ladda");
 var Angular2DatatableModule = (function () {
     function Angular2DatatableModule() {
     }
@@ -25,7 +26,13 @@ Angular2DatatableModule = __decorate([
             angular2_datatable_1.DataTableModule,
             forms_1.FormsModule,
             http_1.HttpModule,
-            shared_module_1.SharedModule
+            shared_module_1.SharedModule,
+            angular2_ladda_1.LaddaModule, angular2_ladda_1.LaddaModule.forRoot({
+                style: "zoom-out",
+                spinnerSize: 40,
+                spinnerColor: "white",
+                spinnerLines: 12
+            })
         ],
         declarations: [angular2_datatable_2.TestTableComponent, data_filterpipe_1.DataFilterPipe],
         exports: [angular2_datatable_2.TestTableComponent, data_filterpipe_1.DataFilterPipe]

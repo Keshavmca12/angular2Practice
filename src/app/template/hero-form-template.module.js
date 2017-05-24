@@ -12,6 +12,7 @@ var hero_form_template1_component_1 = require("./hero-form-template1.component")
 var hero_form_template2_component_1 = require("./hero-form-template2.component");
 var combo_component_1 = require("./combo.component");
 var test_form_component_1 = require("./test.form.component");
+var angular2_ladda_1 = require("angular2-ladda");
 var HeroFormTemplateModule = (function () {
     function HeroFormTemplateModule() {
     }
@@ -19,7 +20,12 @@ var HeroFormTemplateModule = (function () {
 }());
 HeroFormTemplateModule = __decorate([
     core_1.NgModule({
-        imports: [shared_module_1.SharedModule, forms_1.FormsModule],
+        imports: [shared_module_1.SharedModule, forms_1.FormsModule, angular2_ladda_1.LaddaModule, angular2_ladda_1.LaddaModule.forRoot({
+                style: "contract",
+                spinnerSize: 40,
+                spinnerColor: "red",
+                spinnerLines: 12
+            })],
         declarations: [hero_form_template1_component_1.HeroFormTemplate1Component, hero_form_template2_component_1.HeroFormTemplate2Component, test_form_component_1.TestForm, combo_component_1.ComboComponent],
         exports: [hero_form_template1_component_1.HeroFormTemplate1Component, hero_form_template2_component_1.HeroFormTemplate2Component, test_form_component_1.TestForm, combo_component_1.ComboComponent]
     })

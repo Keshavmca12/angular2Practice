@@ -6,7 +6,7 @@ export class InvokeDirective {
   @Output() invoke:EventEmitter<any> = new EventEmitter<any>();
 
   ngOnInit() {
-    console.log("xxxx");
+   // console.log("xxxx");
     this.invoke.emit(null);
   }
 

@@ -14,7 +14,7 @@ var forms_1 = require("@angular/forms");
 function forbiddenNameValidator(nameRe) {
     return function (control) {
         var name = control.value;
-        console.log("control", control);
+        // console.log("control",control);
         var no = nameRe.test(name);
         return no ? { 'forbiddenName': { name: name } } : null;
     };
@@ -25,7 +25,7 @@ var ForbiddenValidatorDirective = ForbiddenValidatorDirective_1 = (function () {
         this.valFn = forms_1.Validators.nullValidator;
     }
     ForbiddenValidatorDirective.prototype.ngOnChanges = function (changes) {
-        console.log("changes", changes);
+        //  console.log("changes",changes);
         var change = changes['forbiddenName'];
         if (change) {
             var val = change.currentValue;

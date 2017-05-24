@@ -17,6 +17,7 @@ var TestTableComponent = (function () {
         this.rowsOnPage = 10;
         this.sortBy = "email";
         this.sortOrder = "asc";
+        this.isLoading = false;
         this.sortByWordLength = function (a) {
             return a.city.length;
         };
@@ -30,8 +31,14 @@ var TestTableComponent = (function () {
             }, 1000);
         });
     };
+    TestTableComponent.prototype.progressLoading = function (event) {
+        var _this = this;
+        this.isLoading = !this.isLoading;
+        console.log("isLoading" + this.isLoading);
+        setTimeout(function () { _this.isLoading = !_this.isLoading; }, 3000);
+    };
     TestTableComponent.prototype.testFunc = function (item) {
-        console.log("item id ", item.email);
+        //  console.log("item id ",item.email);
     };
     TestTableComponent.prototype.toInt = function (num) {
         return +num;

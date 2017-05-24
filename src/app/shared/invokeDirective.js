@@ -17,7 +17,7 @@ var InvokeDirective = (function () {
          }*/
     }
     InvokeDirective.prototype.ngOnInit = function () {
-        console.log("xxxx");
+        // console.log("xxxx");
         this.invoke.emit(null);
     };
     return InvokeDirective;

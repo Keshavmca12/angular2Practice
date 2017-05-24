@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var ng2_table_1 = require("ng2-table");
-var ng2_bootstrap_1 = require("ng2-bootstrap");
+//import {PaginationModule} from "ng2-bootstrap";
 var datatable_component_1 = require("./datatable.component");
 var common_1 = require("@angular/common");
 var http_1 = require("@angular/http");
@@ -20,7 +20,7 @@ var NG2DataTableModule = (function () {
 NG2DataTableModule = __decorate([
     core_1.NgModule({
         imports: [common_1.CommonModule, forms_1.FormsModule,
-            http_1.HttpModule, ng2_table_1.Ng2TableModule, ng2_bootstrap_1.PaginationModule.forRoot()],
+            http_1.HttpModule, ng2_table_1.Ng2TableModule /*, PaginationModule.forRoot()*/],
         declarations: [datatable_component_1.TableDemoComponent],
         exports: [datatable_component_1.TableDemoComponent]
     })

@@ -22,8 +22,8 @@ var hero_form_reactive_component_1 = require("./reactive/hero-form-reactive.comp
 var breadcrumb_module_1 = require("./breadcrumbnew/breadcrumb.module");
 var angular2_tatablemodule_1 = require("./datatable-angular2/angular2-tatablemodule");
 var angular2_datatable_1 = require("./datatable-angular2/angular2-datatable");
-var datatable_module_1 = require("./ng2dataTable/datatable.module");
-var datatable_component_1 = require("./ng2dataTable/datatable.component");
+/*import {NG2DataTableModule} from "./ng2dataTable/datatable.module";
+import {TableDemoComponent} from "./ng2dataTable/datatable.component";*/
 var pdfviewerModule_1 = require("./pdfviewerComponent/pdfviewerModule");
 var pdfCiewerComponent_1 = require("./pdfviewerComponent/pdfCiewerComponent");
 var appRoutes = [
@@ -51,10 +51,10 @@ var appRoutes = [
         path: 'angular2Dtable',
         component: angular2_datatable_1.TestTableComponent
     },
-    {
-        path: 'ng2Dtable',
-        component: datatable_component_1.TableDemoComponent
-    },
+    /*{
+      path: 'ng2Dtable',
+      component: TableDemoComponent
+    },*/
     {
         path: 'pdfViewer',
         component: pdfCiewerComponent_1.MyPDFViewerComponent
@@ -78,7 +78,7 @@ AppModule = __decorate([
             router_1.RouterModule,
             router_1.RouterModule.forRoot(appRoutes),
             angular2_tatablemodule_1.Angular2DatatableModule,
-            datatable_module_1.NG2DataTableModule,
+            // NG2DataTableModule,
             pdfviewerModule_1.MyPDFViewerModule
         ],
         declarations: [app_component_1.AppComponent],

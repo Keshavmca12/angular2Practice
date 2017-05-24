@@ -6,6 +6,8 @@ import { HttpModule } from "@angular/http";
 import { TestTableComponent} from "./angular2-datatable";
 import {DataFilterPipe} from "./data-filterpipe";
 import {SharedModule} from "../shared/shared.module";
+import {LaddaModule} from 'angular2-ladda';
+
 
 @NgModule({
   imports:      [
@@ -13,7 +15,13 @@ import {SharedModule} from "../shared/shared.module";
     DataTableModule,
     FormsModule,
     HttpModule,
-    SharedModule
+    SharedModule,
+    LaddaModule, LaddaModule.forRoot({
+            style: "zoom-out",
+            spinnerSize: 40,
+            spinnerColor: "white",
+            spinnerLines: 12
+        })
   ],
   declarations: [ TestTableComponent,DataFilterPipe ],
   exports: [TestTableComponent,DataFilterPipe]
